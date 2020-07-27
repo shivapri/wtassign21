@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta content="text/html;charset=utf-8" http-equiv="Content-Type"> -->
+    <!-- <meta content="utf-8" http-equiv="encoding">   -->
+    <!-- <meta charset="UTF-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-5">  -->
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<script src="form.js">
+
+</script>
+
+<body>
+    <div class="beforenav">
+        <img src="images/email.png" alt="image1" id="image">
+        <span class="text">
+            <em id="emailandmobile">spsingh@mitaoe.ac.in | 9834208748</em>
+        </span>
+        <span>
+            <img src="images/facebook-logo.jpg" alt="image2" class="logos">
+            <img src="images/twitter.png" alt="image3" class="logos">
+            <img src="images/instagram.jpg" alt="image4" class="logos">
+
+        </span>
+    </div>
+    <nav class="navbar">
+        <img src="images/logoe.jpg" alt="logo" id="elog">
+        <span class="menu">
+            <a href="index.html" class="menutext">home</a>
+            <a href="registration.html" class="menutext">registration</a>
+            
+
+        </span>
+    </nav>
+    <form name="myform" method="post" action="#" onsubmit="validateform();return false ">
+        <label for="lname">Name</label> <input type="text" name="name" id="namev"><br>
+        <span id="nam1"></span><br>
+        <label for="lpassword">Password</label><input type="password" name="password" id="passev"><br>
+        <span id="pword"></span><br>
+        <label for="lcpassw">Confirm Password</label><input type="password" name="cpassword" id="cev"><br>
+        <span id="cpword"></span><br>
+        <label for="lem">Email</label> <input type="text" name="Email" class="emev"><br>
+        <span id="email"></span><br>
+        <label for="lmobno">Mobile NO</label> <input type="number" min="999999999" max="9999999999" id="mob1"
+            name="mobile" required><br>
+        <span id="contact"></span><br>
+        <button type="submit" class="btn btn-primary" id="add">REGISTER</button>
+
+    </form>
+    <div id="items">
+        <h2 class="youritems">Registration details</h2>
+        <!-- <table class="table">
+        <thead>
+            <th scope="col">SNO</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile No</th>
+        </thead>
+        <tbody>
+            <th scope="row">1</th>
+            <td>Shivam</td>
+            <td>spsingh@mitaoe.ac.in</td>
+            <td>9878273313</td>
+        </tbody>
+        </table> -->
+    </div>
+    <div class="tablevent">
+        <table class="table">
+            <thead>
+               
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Mobile No</th>
+            </thead>
+            <tbody id="addeveent">
+                <tr>
+                
+                <td>Shivam123344</td>
+                <td>spsingh@mitaoe.ac.in</td>
+                <td>9878273313</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <script>
+        var repeater;
+        let prevHTML = document.querySelector('#items').innerHTML;
+        add = document.getElementById("passev");
+        add.addEventListener("mouseover", () => {
+            document.querySelector('#items').innerHTML = document.querySelector('#items').innerHTML + "<br><em>password should not be blank</em><br><em>password should have at least one capital letter one small letter and one digit</em><br>"
+            console.log("event added");
+
+        }, { once: true }
+        )
+        // function eventdekh(){
+        // document.querySelector('#items').innerHTML =document.querySelector('#items').innerHTML+"<br><p>Name should not be blank</p><p>Name should be between 3-30 characters<p>Name should not be numeric</p>"
+        // console.log("event added");
+        // }
+        // add.addEventListener("mouseout",()=>{
+        //             document.querySelector('#items').innerHTML =prevHTML;
+        //             console.log("event added");
+        // })
+
+
+        // setTimeout(mousemini,10000);
+        // setTimeout(eventmatdekh,10000);
+
+        add = document.getElementById("namev");
+        add.addEventListener("mouseover", () => {
+            document.querySelector('#items').innerHTML = document.querySelector('#items').innerHTML + "<br><em>Name should not be blank</p><p>Name should be between 3-30 characters</p></em><em>Name should not be numeric</em><br>"
+            console.log("event added");
+
+        }, { once: true }
+        )
+        add = document.getElementById("cev");
+        add.addEventListener("mouseover", () => {
+            document.querySelector('#items').innerHTML = document.querySelector('#items').innerHTML + "<br><em>Confirm Password should match with the password above it</em><br>"
+            console.log("event added");
+
+        }, { once: true }
+        )
+
+        // tn = document.getElementsByTagName("table");
+//  tn = document.getElementsByClassName("table");
+tn = document.getElementById("addeveent");
+// td = document.getElementById()
+    </script>
+</body>
+
+</html>
